@@ -1,0 +1,49 @@
+h2{
+	font-size: 33px;
+    line-height: 33px;
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+
+body{
+	position: relative;
+    font-family: 'Roboto Condensed','Helvetica','Arial',sans-serif;
+    font-weight: 300;
+    background-color: #fff;
+    box-sizing: border-box;
+    /*overflow: hidden;*/
+    /*min-height: 100%;*/
+}
+
+.center{
+	text-align: center;
+}
+
+.profile-photo{
+	border-radius: 320px;
+	width: 320px;
+}
+
+.content{
+	margin:0 auto;
+	max-width: 864px;
+/*	max-width: 500px;*/
+}
+
+.title{
+	font-size: 33px;
+    line-height: 33px;
+    letter-spacing: 2px;
+    font-weight: 100;
+}
+
+p{   
+	color: #6c7279;
+    font-size: 19px;
+    font-weight: 400;
+    margin-top: 19px;}
+
+hr{
+	box-sizing: content-box;
+    height: 0;
+}
