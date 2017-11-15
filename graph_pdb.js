@@ -49,7 +49,7 @@ window.onload = function () {
   var array3 = loadCSV("../result/yama24_med_psimple_result.csv");
   var array4 = loadCSV("../result/yama24_med_psimple_with_pdb_result.csv");
   console.log(divide_array(array1, array2));
-  var chart = new CanvasJS.Chart("chartContainer",
+  var chart = new CanvasJS.Chart("Container",
   {
     title:{
       text: "Result of IDA* in 24puzzle problems"             
@@ -104,7 +104,7 @@ window.onload = function () {
     }
   });
   chart.render();
-  var chart1 = new CanvasJS.Chart("chartContainer1",
+  var chart1 = new CanvasJS.Chart("Container1",
   {
     title:{
       text: "cpu_PDB_speed_up in 24puzzle problems"             
@@ -140,7 +140,7 @@ window.onload = function () {
     }
   });
   chart1.render();
-  var chart2 = new CanvasJS.Chart("chartContainer2",
+  var chart2 = new CanvasJS.Chart("Container2",
   {
     title:{
       text: "psimple_PDB_speed_up in 24puzzle problems"             
@@ -177,7 +177,7 @@ window.onload = function () {
   });
   chart2.render();
 
-  var chart3 = new CanvasJS.Chart("chartContainer3",
+  var chart3 = new CanvasJS.Chart("Container3",
   {
     title:{
       text: "psimple_PDB_speed_up / cpu_PDB_speed_up in 24puzzle problems"             
@@ -214,7 +214,7 @@ window.onload = function () {
   });
   chart3.render();
 
-  var chart4 = new CanvasJS.Chart("chartContainer4",
+  var chart4 = new CanvasJS.Chart("Container4",
   {
     title:{
       text: "cpu_PDB_speed_up / psimple_PDB_speed_up in 24puzzle problems"             
