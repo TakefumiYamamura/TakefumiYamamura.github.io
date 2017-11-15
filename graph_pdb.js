@@ -44,10 +44,10 @@ function divide_array(a, b) {
 }
 
 window.onload = function () {
-  var array1 = loadCSV("result/yama24_med_result.csv");
-  var array2 = loadCSV("result/yama24_med_result_pdb_wo_cuda.csv");
-  var array3 = loadCSV("result/yama24_med_psimple_result.csv");
-  var array4 = loadCSV("result/yama24_med_psimple_with_pdb_result.csv");
+  var array1 = loadCSV("../result/yama24_med_result.csv");
+  var array2 = loadCSV("../result/yama24_med_result_pdb_wo_cuda.csv");
+  var array3 = loadCSV("../result/yama24_med_psimple_result.csv");
+  var array4 = loadCSV("../result/yama24_med_psimple_with_pdb_result.csv");
   console.log(divide_array(array1, array2));
   var chart = new CanvasJS.Chart("chartContainer",
   {
@@ -176,6 +176,7 @@ window.onload = function () {
     }
   });
   chart2.render();
+
   var chart3 = new CanvasJS.Chart("chartContainer3",
   {
     title:{
@@ -212,4 +213,41 @@ window.onload = function () {
     }
   });
   chart3.render();
+
+  var chart4 = new CanvasJS.Chart("chartContainer4",
+  {
+    title:{
+      text: "cpu_PDB_speed_up / psimple_PDB_speed_up in 24puzzle problems"             
+    }, 
+    animationEnabled: true,     
+    axisY:{
+      titleFontFamily: "arial",
+      titleFontSize: 12,
+      includeZero: false
+    },
+    toolTip: {
+      shared: true
+    },
+    data: [
+    {        
+      type: "line",  
+      name: "cpu_PDB_speed_up / psimple_PDB_speed_up",        
+      showInLegend: true,
+      dataPoints: divide_array(divide_array(array3, array4), divide_array(array1, array2))
+    }, 
+    ],
+    legend:{
+      cursor:"pointer",
+      itemclick:function(e){
+        if(typeof(e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+          e.dataSeries.visible = false;
+        }
+        else {
+          e.dataSeries.visible = true;            
+        }
+        chart.render();
+      }
+    }
+  });
+  chart4.render();
 }
