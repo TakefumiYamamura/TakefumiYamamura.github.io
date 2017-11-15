@@ -44,10 +44,10 @@ function divide_array(a, b) {
 }
 
 window.onload = function () {
-  var array1 = loadCSV("../result/yama24_med_result.csv");
-  var array2 = loadCSV("../result/yama24_med_result_pdb_wo_cuda.csv");
-  var array3 = loadCSV("../result/yama24_med_psimple_result.csv");
-  var array4 = loadCSV("../result/yama24_med_psimple_with_pdb_result.csv");
+  var array1 = loadCSV("result/yama24_med_result.csv");
+  var array2 = loadCSV("result/yama24_med_result_pdb_wo_cuda.csv");
+  var array3 = loadCSV("result/yama24_med_psimple_result.csv");
+  var array4 = loadCSV("result/yama24_med_psimple_with_pdb_result.csv");
   console.log(divide_array(array1, array2));
   var chart = new CanvasJS.Chart("Container",
   {
